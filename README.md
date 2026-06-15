@@ -44,7 +44,21 @@ Cenário: Tentativa de login com caracteres especiais inválidos no e-mail
 
 ## 🏗️ 2. Planejamento e Configuração do Ambiente (STLC - Fase 4)
 
+Para a execução dos testes, foi configurado um ambiente de homologação local (Localhost) idêntico ao de desenvolvimento, garantindo acesso completo aos logs do servidor e inspeção de rede.
+
+* **Ambiente de Teste:** Localhost (`http://localhost:3000`)
+* **Banco de Dados:** Instalação local gerenciada via Prisma ORM
+* **Ferramentas de Suporte:** 
+  * VS Code (Análise de código e logs do terminal)
+  * Navegador DevTools (Aba Network para inspeção de payloads HTTP e console de erros)
+
 ## 📋 3. Execução dos Casos de Teste (STLC - Fase 5)
+
+Os cenários mapeados na Fase 1 foram executados manualmente no ambiente configurado. O comportamento de cada caso de teste e os resultados obtidos foram os seguintes:
+
+* **CT-01 (Login com credenciais corretas):** **PASS** – O sistema validou os dados corretamente, gerou a sessão via NextAuth e redirecionou o usuário para a Dashboard inicial.
+* **CT-02 (Formato de e-mail inválido):** **FAIL** – O sistema permitiu a envio do formulário sem validação de domínio superior (Gerou o `BUG-001`).
+* **CT-03 (Caracteres especiais no e-mail):** **FAIL** – O input aceitou símbolos lógicos e disparou uma requisição desnecessária que estourou um stacktrace no servidor (Gerou o `BUG-002`).
 
 ## 🏁 4. Encerramento e Conclusão (STLC - Fase 6)
 
@@ -54,7 +68,7 @@ Cenário: Tentativa de login com caracteres especiais inválidos no e-mail
 * **Bugs Encontrados (FAIL):** 
 
 ### Resumo da Execução:
-* **CT-01 (Teste):** PASS or FAIL – Descreva brevemente o comportamento
+* **CT-01 (Teste):**
 
 ---
 
