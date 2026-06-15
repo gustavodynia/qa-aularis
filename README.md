@@ -7,10 +7,10 @@ O objetivo do projeto é documentar meu aprendizado na área de QA, estruturar c
 ---
 
 ## 🔄 1. Análise de Requisitos e Cenários de Teste (STLC - Fase 1 a 3)
-Nesta etapa inicial do Ciclo de Vida de Testes (STLC), foram analisados os requisitos lógicos da funcionalidade de Autenticação (Login). Com base nessa análise, os cenários de teste foram especificados utilizando a metodologia **BDD (Behavior-Driven Development)** e a sintaxe **Gherkin**, servindo como documentação viva e roteiro para futuras automações.
+Nesta etapa inicial do Ciclo de Vida de Testes (STLC), foram analisados os requisitos lógicos da funcionalidade de Autenticação (Login). Com base nessa análise, os cenários de teste foram especificados utilizando a metodologia **BDD (Behavior-Driven Development)** e a sintaxe **Gherkin**, servindo como roteiro para futuras automações.
 
 ### 🔐 Funcionalidade: Autenticação de Usuários
-#### Cenário 1: Login efetuado com sucesso (Caminho Feliz)
+#### Cenário 1: Login efetuado com sucesso
 * **Objetivo:** Validar o acesso à plataforma com credenciais válidas de professor.
 
 ```gherkin
