@@ -1,0 +1,4 @@
+﻿__pycache__/
+.pytest_cache/
+*.pyc
+tests/screenshot_aularis.png
